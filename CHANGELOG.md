@@ -17,6 +17,7 @@ First commit on the original fork available [here](https://github.com/bgilbert/a
 - Move the COPYING file to an explicit [LICENSE](https://github.com/Nico-Curti/anonymize-slide/blob/master/LICENSE) file.
 - Add the [version](https://github.com/Nico-Curti/anonymize-slide/blob/master/__version__.py) file.
 - Add the entry_point in the module for an easy-to-use command line program.
+- Add the manual copy of the original file to prevent troubles.
 
 ### Fixed
 

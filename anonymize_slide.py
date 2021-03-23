@@ -32,6 +32,7 @@ import os
 import string
 import struct
 import sys
+from shutil import copyfile
 
 PROG_DESCRIPTION = '''
 Delete the slide label from an MRXS, NDPI, or SVS whole-slide image.
@@ -572,10 +573,13 @@ def _main():
 
     exit_code = 0
     for filename in args.files:
+        pre, ext = os.path.splitext(filename)
+        anonym_file = '{}_anonym{}'.format(pre, ext)
+        copyfile(filename, anonym_file)
         try:
             for handler in format_handlers:
                 try:
-                    handler(filename)
+                    handler(anonym_file)
                     break
                 except UnrecognizedFile:
                     pass

@@ -10,6 +10,8 @@ following formats:
 
 Slide files are modified **in place**, making this program both fast and
 potentially destructive.  Do not run it on your only copy of a slide.
+(*In the current fork the orginal file is internally copied to prevent
+this kind of issues*)
 
 [Download](https://github.com/bgilbert/anonymize-slide/releases)
 
